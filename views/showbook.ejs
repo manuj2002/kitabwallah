@@ -1,0 +1,36 @@
+<%- include('./partials/header'); %>
+<% if (results && results.length > 0) { %>
+    <ul style="list-style-type: none; margin: auto;">
+      <% for (let i = 0; i < results.length; i++) { %>
+       <li>
+        <div class="card" style="width: 18rem; margin: auto;">
+          <img class="card-img-top" src=<%= results[i].imagelink %> alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= results[i].name %></h5>
+            <p class="card-text"><%= results[i].description.substring(0,100) %>....</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">genre:<%= results[i].genre %> </li>
+            <li class="list-group-item">written by: <%= results[i].author %></li>
+            <li class="list-group-item">status :<%= results[i].status %></li>
+         
+          </ul>
+          <div class="card-body">
+            <form action="/bookdetail" method="post">
+               <input name="id" type="hidden" value=<%= results[i]._id %> >
+              <button type="submit" class="card-link" >More</button>
+            </form>
+            <a href="#" class="card-link" style="background-color: white;">Another link</a>
+          </div>
+        </div>
+        </li>
+        <br>
+      <% } %>
+    </ul>
+  <% } else { %>
+    <p>No results found.</p>
+  <% } %>
+
+
+
+<%- include('./partials/footer'); %>

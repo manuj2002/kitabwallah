@@ -1,0 +1,30 @@
+<%- include('./partials/header'); %>
+<form method="post" action="/addbook">
+    <div class="form-group" style="height: 800px;width: 600px; margin: auto;;">
+      <label for="exampleFormControlInput1">Name</label>
+      <input name="name"class="form-control" id="exampleFormControlInput1" placeholder="type the name">
+
+      <label for="exampleFormControlInput1">genre</label>
+      <input name="genre" class="form-control" id="exampleFormControlInput1" placeholder="type genre">
+      <label for="exampleFormControlInput1">quantity</label>
+      <input name="quantity" class="form-control" id="exampleFormControlInput1" placeholder="type quantity">
+      <label for="exampleFormControlInput1">author</label>
+      <input name="author" class="form-control" id="exampleFormControlInput1" placeholder="type author">
+      <label for="exampleFormControlInput1">put image-link</label>
+      <input name="imagelink" class="form-control" id="exampleFormControlInput1" placeholder="image link ">
+      
+
+    
+      
+  
+ 
+      <label for="exampleFormControlTextarea1">description</label>
+      <textarea name="description"class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </div>
+   
+  </form>
+
+
+
+<%- include('./partials/footer'); %>
